@@ -162,7 +162,7 @@ int main() {
     }
     else if(algorithm_number == 6){
     int N;
-    printf("N: ");
+    printf("6_N: ");
     scanf("%d", &N);
 
     if (N >= 2) {
@@ -177,9 +177,7 @@ int main() {
     for (int j = 3; j <= N; j += 2) {
         if (is_flag[j]) {
             printf("%d ", j); // 현재 숫자는 소수로 출력
-
             total_operations++;
-
             for (int multiple = j * j; multiple <= N; multiple += 2 * j) {
                 is_flag[multiple] = false; // j의 배수들을 소수가 아닌 것으로 표시
                 total_operations++;
