@@ -24,7 +24,7 @@ int main(void) {
     if (year % 4 == 0 && year % 100 != 0 || year % 400 == 0) {
       printf("1");
     } else {
-      printf("0");
+      printf("0"); 
     }
   } else if (problem_number == 3) {
     // 3번 문제
