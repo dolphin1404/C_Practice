@@ -1,12 +1,14 @@
 #include <stdio.h>
 
-int Fibo(int x){
-  if (x >= 2){
-    return Fibo(x-1) + Fibo(x-2);
-  }else if(x == 1) return 1;
-  else return 0;
+int Fibo(int x) {
+  if (x >= 2) {
+    return Fibo(x - 1) + Fibo(x - 2);
+  } else if (x == 1)
+    return 1;
+  else
+    return 0;
 }
-int main(){
+int main() {
   /* 2753번 윤년 https://www.acmicpc.net/problem/2753
   int year;
   scanf("%d", &year);
@@ -46,12 +48,12 @@ int main(){
     for(int i = 0; i < n; i++){ // 0번째가 존재함을 알자
       f0 = f1;  // 1
       f1 = fn;  // 0
-      fn = f0 + f1; 
+      fn = f0 + f1;
     }
     printf("%d", fn);
   }
   */
-  //재귀함수
+  // 재귀함수
   int n;
   scanf("%d", &n);
   printf("%d\n", Fibo(n));
