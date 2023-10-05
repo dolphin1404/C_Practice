@@ -2,18 +2,19 @@
 
 int modcount = 0;
 
-int gcd(int a, int b) {
+int findGCD(int a, int b) {
   if (b == 0)
     return (a);
   else {
     modcount++;
-    return (gcd(b, a % b));
+    return (findGCD(b, a % b));
   }
 }
 int main() {
   int a, b;
+  printf("두 수를 입력하세요: ");
   scanf("%d %d", &a, &b);
-  int answer = gcd(a, b);
-  printf("%d ", answer);
-  printf("%d", modcount);
+  int gcd = findGCD(a, b);
+  printf("최대공약수 (GCD): %d\n", gcd);
+  printf("mod 연산 횟수: %d", modcount);
 }
