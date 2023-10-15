@@ -23,7 +23,8 @@ char pop() {
 
 // Function to check if a character is an operand
 bool isOperand(char x) {
-  return (x >= 'a' && x <= 'z') || (x >= 'A' && x <= 'Z');
+  return (x >= 'a' && x <= 'z') || (x >= 'A' && x <= 'Z') ||
+         (x >= '0' && x <= '9');
 }
 
 int precedence(char x) {
@@ -70,10 +71,8 @@ int main() {
   char expression[100];
   printf("Enter an infix expression: ");
   scanf("%s", expression);
-
   printf("Postfix expression: ");
   infixToPostfix(expression);
-
   return 0;
 }
 
