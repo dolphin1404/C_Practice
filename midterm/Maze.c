@@ -32,7 +32,7 @@ void readMazeFromFile(const char* filename) {
 }
 
 int route[ROW][COL][3];
-int* ans[ROW * COL];
+int* ans[ROW * COL] = (int *) malloc(ROW * COL);
 int top = 0;
 int startR, startC;
 int destR, destC;
